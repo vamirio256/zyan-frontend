@@ -1,9 +1,12 @@
+import MenuBar from "./layouts/Menu/Menu";
+import TopBar from "./layouts/TopBar/TopBar";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+    <>
+      <MenuBar />
+      <TopBar />
+    </>
   );
 }
 
