@@ -1,0 +1,21 @@
+.card {
+  width: 238px;
+  height: 311px;
+  display: block;
+  text-align: left;
+  padding: 19px 23px;
+
+  &__img {
+    width: 200px;
+  }
+
+  &__song {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--font-black);
+  }
+
+  &__artist {
+    color: var(--font-gray);
+  }
+}

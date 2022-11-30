@@ -1,13 +1,15 @@
 .menu {
-  background-color: #fff;
-  position: absolute;
+  background-color: var(--menu-bg);
   width: 300px;
   height: 100vh;
-  left: 0px;
-  top: 0px;
 
   &__title {
     font-family: "Comfortaa", cursive;
     color: var(--font-blue);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
   }
 }

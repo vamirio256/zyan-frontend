@@ -3,7 +3,7 @@ import "./TopBar.scss";
 const TopBar = () => {
   return (
     <header className="top-bar">
-      <p>Hello</p>
+      <p>Top Bar</p>
     </header>
   );
 };
