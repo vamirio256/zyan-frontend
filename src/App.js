@@ -1,10 +1,10 @@
-import MenuBar from "./layouts/Menu/Menu";
+import Menu from "./layouts/Menu/Menu";
 import TopBar from "./layouts/TopBar/TopBar";
 
 function App() {
   return (
     <>
-      <MenuBar />
+      <Menu />
       <TopBar />
     </>
   );

@@ -1,7 +1,11 @@
-import "./Menu.css";
+import "./Menu.scss";
 
-const MenuBar = () => {
-  return <div className="menu-bar"></div>;
+const Menu = () => {
+  return (
+    <aside className="menu">
+      <h1 className="menu__title">Zyan</h1>
+    </aside>
+  );
 };
 
-export default MenuBar;
+export default Menu;
