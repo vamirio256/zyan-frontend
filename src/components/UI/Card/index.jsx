@@ -1,7 +1,7 @@
-import './style.css'; 
+import "./style.css";
 
 const Card = (props) => {
-  return <>{props.children}</>;
+    return <>{props.children}</>;
 };
 
 export default Card;

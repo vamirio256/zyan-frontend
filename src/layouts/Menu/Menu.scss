@@ -1,13 +1,23 @@
 .menu {
-  background-color: #fff;
-  position: absolute;
-  width: 300px;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
+    background-color: #fff;
 
-  &__title {
-    font-family: "Comfortaa", cursive;
-    color: var(--font-blue);
-  }
+    width: 300px;
+    height: 50vh;
+    left: 0px;
+    top: 0px;
+
+    &__title {
+        font-family: "Comfortaa", cursive;
+        color: var(--font-blue);
+    }
+}
+#dark {
+    .test {
+        color: red;
+    }
+}
+#light {
+    .test {
+        color: blue;
+    }
 }
