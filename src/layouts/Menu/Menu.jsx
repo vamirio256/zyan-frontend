@@ -1,16 +1,15 @@
 import React from "react";
-import { ThemeContext } from "../../App";
 import "./Menu.scss";
 const Menu = () => {
     return (
-        <ThemeContext.Consumer>
-            {({ theme, toggleTheme }) => (
-                <aside className="menu">
-                    <h1 className="menu__title">Zyan</h1>
-                    <h2 className="test">test</h2>
-                </aside>
-            )}
-        </ThemeContext.Consumer>
+        <aside className="menu">
+            <h1 className="menu__title">Zyan</h1>
+            <div className="menu__list">
+                <a href="home">Trang chủ</a>
+                <a href="favorite">Yêu thích</a>
+                <a href="follow">Theo dõi</a>
+            </div>
+        </aside>
     );
 };
 
