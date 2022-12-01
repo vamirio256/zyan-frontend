@@ -1,12 +1,18 @@
 .card {
   width: 238px;
   height: 311px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding: 19px 23px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--menu-bg);
+
 
   &__img {
     width: 200px;
+    height: 200px;
   }
 
   &__song {

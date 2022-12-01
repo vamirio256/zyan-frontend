@@ -1,0 +1,23 @@
+.media-control {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--media-control-bg);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  &__content {
+    &__img {
+      width: 80px;
+    }
+
+    &__title {
+      &__song {
+        font-weight: 500;
+      }
+      &__artist {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

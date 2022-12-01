@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap");
 
 :root {
   --font-blue: #3b75ff;
@@ -6,10 +7,11 @@
   --font-black: #000000;
   --menu-bg: #ffffff;
   --main-bg: #f0f2f9;
-  --media-bg: #f9f9f9;
+  --media-control-bg: #f9f9f9;
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
