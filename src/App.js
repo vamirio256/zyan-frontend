@@ -1,5 +1,3 @@
-import { createContext } from "react";
-import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MediaControl from "./layouts/MediaControl/MediaControl";
 import "./App.scss";
@@ -9,6 +7,9 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Favorite from "./pages/Favorite/Favorite";
 import Follow from "./pages/Follow/Follow";
 import Home from "./pages/Home/Home";
+
+import Discover from "./pages/Discover/Discover";
+import { createContext, useState } from "react";
 
 export const ThemeContext = createContext(null);
 
@@ -27,7 +28,8 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/home" element={<Home />} />
-                            <Route path="/favorite" element={<Favorite />} />
+                            <Route path="/favorite" element={<Favorite />} />       
+                            <Route path="/discover" element={<Discover />} />
                             <Route path="/follow" element={<Follow />} />
                             <Route path="*" element={<ErrorPage />} />
                         </Routes>
