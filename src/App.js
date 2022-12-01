@@ -16,11 +16,12 @@ function App() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
+  
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id="theme">
         <BrowserRouter>
-          <Menu />
+          <Menu className="app__menu" />
           <div className="app__container">
             <TopBar />
             <Routes>
