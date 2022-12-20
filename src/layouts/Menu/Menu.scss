@@ -1,9 +1,9 @@
 .menu {
-  width: 300px;
-  height: 50vh;
   left: 0px;
   top: 0px;
-
+  position: sticky;
+  min-width: 200px;
+  padding: 0 20px;
   &__title {
     font-family: "Comfortaa", cursive;
     color: var(--blue);
@@ -11,27 +11,25 @@
     font-size: 40px;
     margin-top: 20px;
   }
-
   &__list {
     margin-top: 20px;
-    padding: 0 20px;
-    a {
-      &.active {
-        background-color: var(--blue);
-        color: white;
-      }
-      svg {
-        margin-top: -2px;
-        margin-right: 10px;
-        width: 20px;
-        height: 20px;
-      }
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: black;
+  }
+
+  &__playlist {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--blue);
+    color: white;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    svg {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
     }
   }
 }

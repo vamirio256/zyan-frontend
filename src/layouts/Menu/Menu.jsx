@@ -1,13 +1,27 @@
 import React from "react";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import "./Menu.scss";
-import { AiFillHome, AiOutlineHome } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiOutlineHome,
+  AiOutlineHeart,
+  AiFillHeart,
+  AiOutlineDownload,
+  AiOutlinePlus,
+} from "react-icons/ai";
 import { HiOutlineMicrophone, HiMicrophone } from "react-icons/hi";
+import { RiAlbumFill, RiAlbumLine } from "react-icons/ri";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { BsPerson, BsPersonFill } from "react-icons/bs";
+import { data } from "../../contexts/dummy_data";
 
 const Menu = () => {
-  const [menuId, setMenuId] = useState(useLocation().pathname);
+  let path = useLocation().pathname;
+  if (path === "/") {
+    path = "/home";
+  }
+  const [menuId, setMenuId] = useState(path);
 
   return (
     <aside className="menu">
@@ -29,7 +43,46 @@ const Menu = () => {
           title="Khám phá"
           parentSetState={setMenuId}
         />
+        <div className="submenu_title">Library</div>
+        {/* library */}
+        <MenuButton
+          id={menuId}
+          href="/favorite"
+          defaultIcon={<AiOutlineHeart />}
+          selectedIcon={<AiFillHeart />}
+          title="Yêu thích"
+          parentSetState={setMenuId}
+        />
+        <MenuButton
+          id={menuId}
+          href="/album"
+          defaultIcon={<RiAlbumLine />}
+          selectedIcon={<RiAlbumFill />}
+          title="Album"
+          parentSetState={setMenuId}
+        />
+        <MenuButton
+          id={menuId}
+          href="/download"
+          defaultIcon={<AiOutlineDownload />}
+          selectedIcon={<AiOutlineDownload color="white" />}
+          title="Tải xuống"
+          parentSetState={setMenuId}
+        />
+        <MenuButton
+          id={menuId}
+          href="/follow"
+          defaultIcon={<BsPerson />}
+          selectedIcon={<BsPersonFill />}
+          title="Theo dõi"
+          parentSetState={setMenuId}
+        />
+        <div className="submenu_title">PlayList</div>
+        {/* playlist */}
       </div>
+      <button className="menu__playlist">
+        <AiOutlinePlus className="svg_icon" /> Thêm
+      </button>
     </aside>
   );
 };
