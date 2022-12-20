@@ -1,9 +1,11 @@
 .menu {
-  left: 0px;
-  top: 0px;
   position: sticky;
+  display: block;
+  top: 0px;
   width: 200px;
   padding: 0 20px;
+  z-index: 100;
+  background-color: var(--menu-bg);
   height: 100vh;
   &__title {
     font-family: "Comfortaa", cursive;

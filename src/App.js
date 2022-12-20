@@ -26,20 +26,22 @@ function App() {
       <div className="app" id="theme">
         <BrowserRouter>
           <Menu className="app__menu" />
-          <div className="app__container">
-            <TopBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/favorite" element={<Favorite />} />
-              <Route path="/discover" element={<Discover />} />
-              <Route path="/follow" element={<Follow />} />{" "}
-              <Route path="/download" element={<Download />} />
-              <Route path="/album" element={<Album />} />
-              <Route path="/playlist" element={<Playlist />} />
-              <Route path="*" element={<ErrorPage />} />
-            </Routes>
-            <MediaControl />
+          <div className="app__flex_scrollable">
+            <div className="app__container">
+              <TopBar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/favorite" element={<Favorite />} />
+                <Route path="/discover" element={<Discover />} />
+                <Route path="/follow" element={<Follow />} />{" "}
+                <Route path="/download" element={<Download />} />
+                <Route path="/album" element={<Album />} />
+                <Route path="/playlist" element={<Playlist />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+              <MediaControl />
+            </div>
           </div>
         </BrowserRouter>
       </div>
