@@ -19,12 +19,28 @@
       text-decoration: none;
       color: var(--grey);
       font-size: 13px;
+
+      .text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* number of lines to show */
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
     }
     .submenu_title {
       color: var(--grey);
       font-size: 12px;
       margin-bottom: 12px;
       margin-top: 15px;
+    }
+    .playlist {
+      &__image {
+        width: 20px;
+        height: 20px;
+        padding-right: 10px;
+      }
     }
   }
 }

@@ -83,6 +83,19 @@ const Menu = () => {
       <button className="menu__playlist">
         <AiOutlinePlus className="svg_icon" /> Thêm
       </button>
+      <div className="menu__list">
+        {data.map((playlistItem) => {
+          return (
+            <MenuButton
+              id={menuId}
+              href={"/playlist?id=" + playlistItem.id}
+              title={playlistItem.title}
+              parentSetState={setMenuId}
+              image={playlistItem.images}
+            />
+          );
+        })}
+      </div>
     </aside>
   );
 };
