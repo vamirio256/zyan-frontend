@@ -18,3 +18,15 @@ export const data = [
     id: 3,
   },
 ];
+export const songsdata = [
+  {
+    title: "Pháo Hồng",
+    artist: "Đạt Long Vinh",
+    url: "../../../assets/music/Phao Hong - Dat Long Vinh.m4a",
+  },
+  {
+    title: "Bones",
+    artist: "Image Dragon",
+    url: "../../../assets/music/Image Dragon.mp3",
+  },
+];

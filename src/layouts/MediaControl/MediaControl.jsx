@@ -2,8 +2,12 @@ import "./MediaControl.scss";
 import tempImg from "../../assets/images/temp_img.jpg";
 import { FaRandom } from "react-icons/fa";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
-import { BsPlayCircleFill } from "react-icons/bs";
-import { AiFillPlayCircle } from "react-icons/ai";
+import {
+  BsFileEarmarkMusic,
+  BsFillVolumeUpFill,
+  BsPlayCircleFill,
+} from "react-icons/bs";
+import { AiFillPlayCircle, AiOutlineUnorderedList } from "react-icons/ai";
 import { CiRedo } from "react-icons/ci";
 const MediaControl = (props) => {
   return (
@@ -33,7 +37,23 @@ const MediaControl = (props) => {
             <BiSkipNext size={30} />
             <CiRedo size={20} />
           </div>
-          <div className="media-control__content__control__timeline"></div>
+          {/* timeline */}
+          <div className="media-control__content__control__timeline">
+            <div className="current-time">0:12</div>
+            <div className="timeline-wrapper">
+              <div className="timeline-wrapper__running-line"></div>
+            </div>
+            <div className="total-time">3:20</div>
+          </div>
+        </div>
+        {/* setting */}
+        <div className="media-control__content__settings">
+          <BsFileEarmarkMusic />
+          <AiOutlineUnorderedList />
+          <BsFillVolumeUpFill />
+          <div className="volume-wrapper">
+            <div className="volume-wrapper__running-line"></div>
+          </div>
         </div>
       </div>
     </div>
