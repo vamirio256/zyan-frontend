@@ -8,6 +8,7 @@ import {
   AiFillHeart,
   AiOutlineDownload,
   AiOutlinePlus,
+  AiOutlineClose,
 } from "react-icons/ai";
 import { HiOutlineMicrophone, HiMicrophone } from "react-icons/hi";
 import { RiAlbumFill, RiAlbumLine } from "react-icons/ri";
@@ -22,10 +23,16 @@ const Menu = () => {
     path = "/home";
   }
   const [menuId, setMenuId] = useState(path);
-
+  function closeMenu() {
+    document.getElementById("main-menu").style.left = "-300px";
+    document.body.style.overflow = "auto";
+  }
   return (
-    <aside className="menu">
+    <aside className="menu" id="main-menu">
       <h1 className="menu__title">Zyan</h1>
+      <button className="menu__close-btn" onClick={closeMenu}>
+        <AiOutlineClose />
+      </button>
       <div className="menu__list">
         <MenuButton
           id={menuId}

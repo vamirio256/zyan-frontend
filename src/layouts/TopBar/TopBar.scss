@@ -1,8 +1,7 @@
+@import "../../breakpoint.scss";
 .top-bar {
   height: 45px;
-
   position: fixed;
-
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -10,24 +9,54 @@
   width: inherit;
   width: 100%;
   background-color: var(--main-bg);
+  &__mobile-menu {
+    display: flex;
+    align-items: center;
+    button {
+      background: none;
+      border: none;
+    }
+    &__icon {
+      font-size: 20px;
+      padding-left: 20px;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
   &__content {
     display: flex;
-
     width: 100%;
-    padding-right: 50px;
+    padding-right: 20px;
+    padding-left: 220px;
+    @include mobile-tablet {
+      padding-left: 0;
+    }
   }
   &__navigate {
     padding-top: 5px;
   }
   &__align_left {
-    padding-left: 250px;
-
     display: flex;
     align-items: center;
+    @include mobile {
+      margin-left: auto;
+    }
+  }
+  @include mobile {
+    .mobile-search-input {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 60px;
+    }
   }
   &__search-box {
-    position: relative;
     padding-left: 20px;
+    position: relative;
+    @include mobile {
+      display: none;
+    }
     input {
       background-color: #fff;
       height: 30px;
@@ -39,18 +68,30 @@
       outline: none;
     }
 
-    &__icon {
+    button {
       position: absolute;
       left: 30px;
       top: 5px;
       font-size: 20px;
       color: var(--grey);
+      @include mobile {
+        right: 20px;
+        left: auto;
+      }
     }
   }
   &__setting {
     display: flex;
-    margin-left: auto;
+
     align-items: center;
+    @include tablet-desktop {
+      margin-left: auto;
+    }
+    @include mobile {
+      .hiding-icon {
+        display: none;
+      }
+    }
     &__wrapper {
       background-color: white;
       width: 25px;
@@ -59,6 +100,10 @@
       border-radius: 50%;
       box-shadow: 8px 8px 27px -12px rgba(0, 0, 0, 0.75);
       padding: 5px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
       &__icon {
         margin: auto;
         display: block;

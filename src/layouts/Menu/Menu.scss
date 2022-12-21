@@ -1,7 +1,11 @@
 @import "../../breakpoint.scss";
 .menu {
-  @include mobile {
-    display: none;
+  @include mobile-tablet {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    transition: left 1s;
+    overflow: auto;
   }
   position: sticky;
   display: block;
@@ -11,6 +15,14 @@
   z-index: 99999999;
   background-color: var(--menu-bg);
   height: 100vh;
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
   &__title {
     font-family: "Comfortaa", cursive;
     color: var(--blue);
