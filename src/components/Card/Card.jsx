@@ -6,10 +6,10 @@ const Card = (props) => {
 
   return (
     <div className={cardClass}>
-      <img src={image} className="card__img" />
-      <div>
-        <p className="card__song">{props.song}</p>
-        <p className="card__artist">{props.artist}</p>
+        <img src={image} className="card__img" />
+        <div>
+          <p className="card__song">{props.song}</p>
+          <p className="card__artist">{props.artist}</p>
       </div>
     </div>
   );

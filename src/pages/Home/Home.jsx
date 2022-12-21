@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
       <section className="home">
-        Home
         <ListCard title="Đã phát gần đây" />
         <ListCard title="Đề xuất của Zyan" />
         <ListCard title="Hôm nay nghe gì" />
