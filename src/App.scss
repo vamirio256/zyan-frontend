@@ -1,8 +1,10 @@
 .app {
   display: flex;
   position: relative;
-  padding-bottom: 100px;
+
   &__container {
+    padding-bottom: 100px;
+    padding-left: 20px;
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
@@ -11,5 +13,8 @@
     width: 100%;
     overflow: auto;
     display: flex;
+    background-color: var(--main-bg);
+    position: relative;
+    padding-top: 50px;
   }
 }

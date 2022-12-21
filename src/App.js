@@ -26,9 +26,9 @@ function App() {
       <div className="app" id="theme">
         <BrowserRouter>
           <Menu className="app__menu" />
+          <TopBar />
           <div className="app__flex_scrollable">
             <div className="app__container">
-              <TopBar />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
@@ -40,9 +40,9 @@ function App() {
                 <Route path="/playlist" element={<Playlist />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
-              <MediaControl />
             </div>
           </div>
+          <MediaControl />
         </BrowserRouter>
       </div>
     </ThemeContext.Provider>
