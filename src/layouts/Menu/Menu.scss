@@ -1,4 +1,8 @@
+@import "../../breakpoint.scss";
 .menu {
+  @include mobile {
+    display: none;
+  }
   position: sticky;
   display: block;
   top: 0px;
