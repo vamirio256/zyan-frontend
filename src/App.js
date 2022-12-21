@@ -7,7 +7,11 @@ import Favorite from "./pages/Favorite/Favorite";
 import Home from "./pages/Home/Home";
 import "./App.scss";
 import Follow from "./pages/Follow/Follow";
+import Discover from "./pages/Discover/Discover";
 import { createContext, useState } from "react";
+import Download from "./pages/Download/Download";
+import Album from "./pages/Album/Album";
+import Playlist from "./pages/Playlist/Playlist";
 
 export const ThemeContext = createContext(null);
 
@@ -16,23 +20,29 @@ function App() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
-  
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id="theme">
         <BrowserRouter>
           <Menu className="app__menu" />
-          <div className="app__container">
-            <TopBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/favorite" element={<Favorite />} />
-              <Route path="/follow" element={<Follow />} />
-              <Route path="*" element={<ErrorPage />} />
-            </Routes>
-            <MediaControl />
+          <TopBar />
+          <div className="app__flex_scrollable">
+            <div className="app__container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/favorite" element={<Favorite />} />
+                <Route path="/discover" element={<Discover />} />
+                <Route path="/follow" element={<Follow />} />{" "}
+                <Route path="/download" element={<Download />} />
+                <Route path="/album" element={<Album />} />
+                <Route path="/playlist" element={<Playlist />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </div>
           </div>
+          <MediaControl />
         </BrowserRouter>
       </div>
     </ThemeContext.Provider>

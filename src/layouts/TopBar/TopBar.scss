@@ -1,38 +1,121 @@
+@import "../../breakpoint.scss";
 .top-bar {
   height: 45px;
-  width: 100%;
-  background-color: var(--main-bg);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: fixed;
   z-index: 1000;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-
-  &__search-box {
-    background-color: #fff;
-    height: 30px;
-    width: 400px;
-    border-radius: 20px;
-
+  width: inherit;
+  width: 100%;
+  background-color: var(--main-bg);
+  &__mobile-menu {
+    display: flex;
+    align-items: center;
+    button {
+      background: none;
+      border: none;
+    }
     &__icon {
-      font-size: 2rem;
+      font-size: 20px;
+      padding-left: 20px;
+    }
+    @include desktop {
+      display: none;
     }
   }
-
-  &__setting {
+  &__content {
     display: flex;
-    &__wrapper {
-      border-radius: 100%;
-      height: 25px;
-      width: auto;
-      &__icon {
-        height: 100%;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 220px;
+    @include mobile-tablet {
+      padding-left: 0;
+    }
+  }
+  &__navigate {
+    padding-top: 5px;
+  }
+  &__align_left {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      margin-left: auto;
+    }
+  }
+  @include mobile {
+    .mobile-search-input {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 60px;
+    }
+  }
+  &__search-box {
+    padding-left: 20px;
+    position: relative;
+    @include mobile {
+      display: none;
+    }
+    input {
+      background-color: #fff;
+      height: 30px;
+      width: 300px;
+      border-radius: 12px;
+      padding-left: 40px;
+      border: none;
+      box-shadow: 8px 8px 27px -12px rgba(0, 0, 0, 0.75);
+      outline: none;
+    }
+
+    button {
+      position: absolute;
+      left: 30px;
+      top: 5px;
+      font-size: 20px;
+      color: var(--grey);
+      @include mobile {
+        right: 20px;
+        left: auto;
       }
     }
-    &__avatar {
-      width: auto;
+  }
+  &__setting {
+    display: flex;
+
+    align-items: center;
+    @include tablet-desktop {
+      margin-left: auto;
+    }
+    @include mobile {
+      .hiding-icon {
+        display: none;
+      }
+    }
+    @include tablet-desktop {
+      .hide-search-btn {
+        display: none;
+      }
+    }
+    &__wrapper {
+      background-color: white;
+      width: 25px;
       height: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+      box-shadow: 8px 8px 27px -12px rgba(0, 0, 0, 0.75);
+      padding: 5px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &__icon {
+        margin: auto;
+        display: block;
+        height: 100%;
+        font-size: 20px;
+        color: var(--grey);
+      }
     }
   }
 }
