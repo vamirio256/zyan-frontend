@@ -37,7 +37,7 @@ const TopBar = (props) => {
           </div>
         </div>
         <div className="top-bar__setting">
-          <div className="top-bar__setting__wrapper">
+          <div className="top-bar__setting__wrapper  hide-search-btn">
             <button
               className="no-bg"
               onClick={() => set_mobile_input(!mobile_input)}
