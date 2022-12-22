@@ -1,13 +1,21 @@
 import "./MediaControl.scss";
 import tempImg from "../../assets/images/temp_img.jpg";
 import { FaRandom } from "react-icons/fa";
-import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
+import {
+  BiDotsHorizontalRounded,
+  BiSkipNext,
+  BiSkipPrevious,
+} from "react-icons/bi";
 import {
   BsFileEarmarkMusic,
   BsFillVolumeUpFill,
   BsPlayCircleFill,
 } from "react-icons/bs";
-import { AiFillPlayCircle, AiOutlineUnorderedList } from "react-icons/ai";
+import {
+  AiFillPlayCircle,
+  AiFillSetting,
+  AiOutlineUnorderedList,
+} from "react-icons/ai";
 import { CiRedo } from "react-icons/ci";
 const MediaControl = (props) => {
   return (
@@ -33,15 +41,23 @@ const MediaControl = (props) => {
           <div className="media-control__content__control__icon">
             <FaRandom size={15} />
             <BiSkipPrevious size={30} />
-            <AiFillPlayCircle size={40} color={"#3b75ff"} />
+            <AiFillPlayCircle
+              size={40}
+              color={"#3b75ff"}
+              className="media-control__content__control__icon__mobile-play"
+            />
             <BiSkipNext size={30} />
             <CiRedo size={20} />
+            <BiDotsHorizontalRounded
+              className="media-control__content__control__icon__mobile-setting"
+              size={25}
+            />
           </div>
           {/* timeline */}
           <div className="media-control__content__control__timeline">
             <div className="current-time">0:12</div>
             <div className="timeline-wrapper">
-              <div className="timeline-wrapper__running-line"></div>
+              <div className="timeline-wrapper timeline-wrapper__running-line"></div>
             </div>
             <div className="total-time">3:20</div>
           </div>

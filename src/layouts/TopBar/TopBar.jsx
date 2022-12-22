@@ -12,6 +12,10 @@ const TopBar = (props) => {
     document.getElementById("main-menu").style.left = 0;
     document.body.style.overflow = "hidden";
   }
+  function openLogin() {
+    document.getElementById("login-form").style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
   const [mobile_input, set_mobile_input] = useState(false);
 
   return (
@@ -56,7 +60,9 @@ const TopBar = (props) => {
             <CiSettings className="top-bar__setting__wrapper__icon " />
           </div>
           <div className="top-bar__setting__wrapper">
-            <RiAccountCircleLine className="top-bar__setting__wrapper__icon" />
+            <button className="no-bg" onClick={openLogin}>
+              <RiAccountCircleLine className="top-bar__setting__wrapper__icon" />
+            </button>
           </div>
         </div>
       </div>

@@ -15,68 +15,101 @@ const ListCard = (props) => {
       <div className="list-card__title">
         <h3>{props.title}</h3>
       </div>
-      <Swiper
-        slidesPerView={6}
-        spaceBetween={30}
-        slidesPerGroup={1}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card
-            className="swiper-slide__content"
-            song="Born to Die"
-            artist="Lana Del Rey"
-          />
-        </SwiperSlide>
-      </Swiper>
+      <div className="list-card__slide">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={20}
+          slidesPerGroup={1}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+          autoHeight={true}
+          breakpoints={{
+            600: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+            1200: {
+              slidesPerView: 6,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+              newtype
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+              newtype
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+              newtype
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card
+              className="swiper-slide__content"
+              song="Born to Die"
+              artist="Lana Del Rey"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 };

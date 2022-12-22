@@ -12,6 +12,7 @@ import { createContext, useState } from "react";
 import Download from "./pages/Download/Download";
 import Album from "./pages/Album/Album";
 import Playlist from "./pages/Playlist/Playlist";
+import Login from "./pages/Login/Login";
 
 export const ThemeContext = createContext(null);
 
@@ -25,6 +26,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id="theme">
         <BrowserRouter>
+          <Login className="app__login" />
           <Menu className="app__menu" />
           <TopBar />
           <div className="app__flex_scrollable">

@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   background-color: var(--media-control-bg);
-  z-index: 1000;
+  z-index: 300;
   display: flex;
 
   width: 100%;
@@ -14,6 +14,7 @@
     height: 60px;
   }
   &__content {
+    position: relative;
     display: flex;
     padding-left: 220px;
     justify-content: space-between;
@@ -44,16 +45,21 @@
 
         &__song {
           font-weight: 600;
+          @include mobile {
+            font-size: 13px;
+          }
         }
         &__artist {
           padding-top: 5px;
           font-size: 14px;
+          @include mobile {
+            font-size: 10px;
+          }
         }
       }
     }
     &__control {
       padding-top: 10px;
-      width: 500px;
 
       &__icon {
         display: flex;
@@ -62,6 +68,22 @@
 
         svg {
           color: var(--grey);
+          @include mobile {
+            display: none;
+          }
+        }
+        @include tablet-desktop {
+          &__mobile-setting {
+            display: none;
+          }
+        }
+        @include mobile {
+          justify-content: end;
+          padding-right: 20px;
+          &__mobile-play,
+          &__mobile-setting {
+            display: block !important;
+          }
         }
       }
       &__timeline {
@@ -71,14 +93,33 @@
         .timeline-wrapper {
           margin: 0 15px;
           width: 300px;
+
           background-color: var(--grey);
           height: 4px;
           border-radius: 100px;
+          @include tablet {
+            width: 250px;
+            height: 3px;
+          }
+          @include mobile {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+          }
           &__running-line {
-            width: 30%;
+            margin: 0;
             background-color: var(--blue);
-            height: 4px;
-            border-radius: 100px;
+            width: 30px;
+          }
+        }
+        @include mobile {
+          .total-time {
+            display: none;
+          }
+          .current-time {
+            display: none;
           }
         }
       }
@@ -86,7 +127,9 @@
     &__settings {
       display: flex;
       align-items: center;
-
+      @include mobile {
+        display: none;
+      }
       svg {
         font-size: 22px;
         color: var(--grey);

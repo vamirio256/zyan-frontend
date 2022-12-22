@@ -16,6 +16,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BsPerson, BsPersonFill } from "react-icons/bs";
 import { data } from "../../contexts/dummy_data";
+import { useEffect } from "react";
 
 const Menu = () => {
   let path = useLocation().pathname;
@@ -23,6 +24,11 @@ const Menu = () => {
     path = "/home";
   }
   const [menuId, setMenuId] = useState(path);
+  useEffect(() => {
+    closeMenu();
+    return;
+  }, [menuId]);
+
   function closeMenu() {
     document.getElementById("main-menu").style.left = "-300px";
     document.body.style.overflow = "auto";
