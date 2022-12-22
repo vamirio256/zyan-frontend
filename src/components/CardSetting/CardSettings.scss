@@ -23,10 +23,12 @@
   &__other-func {
     width: 180px;
     margin-top: 10px;
+
     @include mobile {
       width: auto;
     }
     &__item {
+      margin-bottom: 10px;
       font-size: 12px;
       svg {
         font-size: 15px;
