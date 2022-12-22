@@ -1,9 +1,28 @@
 @import "../../breakpoint.scss";
 .horizontal-item {
+  position: relative;
   margin-bottom: 10px;
   margin-left: 10px;
   @include mobile {
     margin-left: 0;
+  }
+
+  @include tablet-desktop {
+    &:hover &__play-btn {
+      display: block;
+    }
+  }
+  &:hover &__icon {
+    visibility: visible;
+  }
+
+  &__play-btn {
+    color: var(--grey);
+    display: none;
+    position: absolute;
+    left: -8px;
+    top: 8px;
+    font-size: 35px;
   }
   &__container {
     align-items: center;
@@ -12,7 +31,7 @@
     @include mobile {
       display: none;
     }
-    width: 20px;
+    width: 30px;
   }
   &__duration {
     margin-left: auto;
@@ -24,10 +43,8 @@
     height: 50px;
   }
   &__title {
-    width: 250px;
-    @include mobile {
-      width: 40%;
-    }
+    width: 40%;
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -53,7 +70,15 @@
     font-weight: 300;
     color: var(--grey);
   }
-  &__heart {
+  &__icon {
     margin-left: 10px;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  &__settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
   }
 }

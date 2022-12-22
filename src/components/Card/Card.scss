@@ -61,6 +61,14 @@
     button {
       cursor: pointer;
     }
+    &__popup {
+      position: relative;
+      &__container {
+        position: absolute;
+        bottom: -170px;
+        right: 10px;
+      }
+    }
   }
   &:hover &__settings {
     display: block;

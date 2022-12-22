@@ -46,14 +46,16 @@ const Card = (props) => {
         <p className="card__des__artist">{props.artist}</p>
       </div>
       <div className="card__settings">
-        <div className="card__setings__container">
+        <div className="card__settings__container">
           <button className="no-bg" onClick={showSettingMenu}>
             <BiDotsHorizontalRounded />
           </button>
         </div>
       </div>
-      <div className="card__setings__container__popup">
-        <CardSetting displaySettings={displaySettings} />
+      <div className="card__settings__popup">
+        <div className="card__settings__popup__container">
+          <CardSetting displaySettings={displaySettings} />
+        </div>
       </div>
     </div>
   );
