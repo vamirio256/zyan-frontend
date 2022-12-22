@@ -9,7 +9,8 @@ import "swiper/css/scrollbar";
 
 import ListCard from "../../components/ListCard/ListCard";
 import "./Home.scss";
-import ListItem from "../../components/ListItem/ListItem";
+
+import HorizontalCard from "../../components/HorizontalCard/HorizontalCard";
 
 const Home = () => {
   const banner_data = [
@@ -139,7 +140,7 @@ const Home = () => {
             <div className="home__new-popular-music__content__list col-8 col-m-12 col-t-9">
               {new_music_data.map((item, index) => {
                 return (
-                  <ListItem
+                  <HorizontalCard
                     title={item.title}
                     artist={item.artist}
                     duration={item.duration}
