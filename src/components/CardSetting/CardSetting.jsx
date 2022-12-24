@@ -7,7 +7,22 @@ import { TbPlayerTrackNext } from "react-icons/tb";
 import { IoIosAddCircle, IoIosListBox, IoIosShareAlt } from "react-icons/io";
 
 export default function CardSetting(props) {
-  if (props.displaySettings)
+  function hideSettingMenu() {
+    let count = 0;
+    document.addEventListener("click", function listenClickOutside(e) {
+      const menu = document.getElementById("card-container");
+
+      if (count > 0 && !menu.contains(e.target)) {
+        props.setDisplaySettings(false);
+        document.removeEventListener("click", listenClickOutside);
+        count = 0;
+      } else {
+        count += 1;
+      }
+    });
+  }
+  if (props.displaySettings) {
+    hideSettingMenu();
     return (
       <div className="card-settings" id="card-container">
         <div className="card-settings__main-func">
@@ -44,5 +59,6 @@ export default function CardSetting(props) {
         </div>
       </div>
     );
+  }
   return <div> </div>;
 }

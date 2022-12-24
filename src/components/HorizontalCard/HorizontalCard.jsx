@@ -10,21 +10,6 @@ export default function HorizontalCard(props) {
   let count = 0;
   function showSettingMenu() {
     setDisplaySettings(true);
-
-    document.addEventListener("click", function listenClickOutside(e) {
-      const menu = document.getElementById("card-container");
-      if (!menu) {
-        document.removeEventListener("click", listenClickOutside);
-        return;
-      }
-      if (count > 0 && !menu.contains(e.target)) {
-        setDisplaySettings(false);
-        document.removeEventListener("click", listenClickOutside);
-        count = 0;
-      } else {
-        count += 1;
-      }
-    });
   }
   return (
     <div className="horizontal-item">
@@ -48,7 +33,10 @@ export default function HorizontalCard(props) {
             onClick={showSettingMenu}
           />
           <div className="horizontal-item__settings">
-            <CardSetting displaySettings={displaySettings} />
+            <CardSetting
+              displaySettings={displaySettings}
+              setDisplaySettings={setDisplaySettings}
+            />
           </div>
         </div>
       </div>

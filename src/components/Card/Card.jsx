@@ -9,24 +9,24 @@ import { useState } from "react";
 const Card = (props) => {
   const cardClass = `${props.class}` ? `card ${props.class}` : `card`;
   const [displaySettings, setDisplaySettings] = useState(false);
-  let count = 0;
+  // let count = 0;
   function showSettingMenu() {
     setDisplaySettings(true);
 
-    document.addEventListener("click", function listenClickOutside(e) {
-      const menu = document.getElementById("card-container");
-      if (!menu) {
-        document.removeEventListener("click", listenClickOutside);
-        return;
-      }
-      if (count > 0 && !menu.contains(e.target)) {
-        setDisplaySettings(false);
-        document.removeEventListener("click", listenClickOutside);
-        count = 0;
-      } else {
-        count += 1;
-      }
-    });
+    // document.addEventListener("click", function listenClickOutside(e) {
+    //   const menu = document.getElementById("card-container");
+    //   if (!menu) {
+    //     document.removeEventListener("click", listenClickOutside);
+    //     return;
+    //   }
+    //   if (count > 0 && !menu.contains(e.target)) {
+    //     setDisplaySettings(false);
+    //     document.removeEventListener("click", listenClickOutside);
+    //     count = 0;
+    //   } else {
+    //     count += 1;
+    //   }
+    // });
   }
 
   return (
@@ -54,7 +54,10 @@ const Card = (props) => {
       </div>
       <div className="card__settings__popup">
         <div className="card__settings__popup__container">
-          <CardSetting displaySettings={displaySettings} />
+          <CardSetting
+            displaySettings={displaySettings}
+            setDisplaySettings={setDisplaySettings}
+          />
         </div>
       </div>
     </div>
