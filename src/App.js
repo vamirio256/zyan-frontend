@@ -13,6 +13,8 @@ import Download from "./pages/Download/Download";
 import Album from "./pages/Album/Album";
 import Playlist from "./pages/Playlist/Playlist";
 import Login from "./pages/Login/Login";
+import Library from "./pages/Library/Library";
+import Contact from "./pages/Contact/Contact";
 
 export const ThemeContext = createContext(null);
 
@@ -34,12 +36,10 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
-                <Route path="/favorite" element={<Favorite />} />
                 <Route path="/discover" element={<Discover />} />
-                <Route path="/follow" element={<Follow />} />{" "}
-                <Route path="/download" element={<Download />} />
-                <Route path="/album" element={<Album />} />
+                <Route path="/library" element={<Library />} />
                 <Route path="/playlist" element={<Playlist />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </div>

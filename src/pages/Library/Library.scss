@@ -1,0 +1,43 @@
+@import "../../breakpoint.scss";
+.library {
+  &__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__description {
+    font-size: 12px;
+    color: var(--grey);
+    margin-bottom: 20px;
+  }
+  &__list {
+    &__category {
+      width: 350px;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 30px;
+      padding: 20px;
+      color: white;
+
+      &__icon {
+        color: white;
+        font-size: 30px;
+      }
+      &__content {
+        span {
+          color: rgb(40, 40, 40);
+        }
+      }
+      &__title {
+        font-size: 20px;
+        margin: 9px 0;
+      }
+    }
+  }
+}
+.background1 {
+  background-image: url("../../assets/images/Rectangle 246.png");
+}
+.background2 {
+  background-image: url("../../assets/images/Rectangle 247.png");
+}

@@ -34,7 +34,10 @@ const TopBar = (props) => {
                 : "top-bar__search-box"
             }
           >
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="Tìm kiếm bài hát, nghệ sĩ, album,..."
+            />
             <button className="no-bg">
               <BsSearch className="top-bar__search-box__icon" />
             </button>

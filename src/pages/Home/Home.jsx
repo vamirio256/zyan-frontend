@@ -11,6 +11,12 @@ import ListCard from "../../components/ListCard/ListCard";
 import "./Home.scss";
 
 import HorizontalCard from "../../components/HorizontalCard/HorizontalCard";
+import {
+  first_slide_home_data,
+  new_music_data,
+  second_slide_home_data,
+  third_slide_home_data,
+} from "../../contexts/dummy_data";
 
 const Home = () => {
   const banner_data = [
@@ -20,38 +26,7 @@ const Home = () => {
     require("../../assets/banner/Rectangle 337.png"),
     require("../../assets/banner/Rectangle 338.png"),
   ];
-  const new_music_data = [
-    {
-      image: require("../../assets/images/Rectangle 225.png"),
-      title: "Tình Đắng Như Ly Cà Phê",
-      artist: "Ngơ",
-      duration: "3:45",
-    },
-    {
-      image: require("../../assets/images/Rectangle 225 (1).png"),
-      title: "Metronome",
-      artist: "Kenshi Yonezu",
-      duration: "4:45",
-    },
-    {
-      image: require("../../assets/images/Rectangle 225 (2).png"),
-      title: "Feeling Are Faltal",
-      artist: "mxmtool",
-      duration: "4:47",
-    },
-    {
-      image: require("../../assets/images/Rectangle 225 (3).png"),
-      title: "Hold",
-      artist: "Ngơ",
-      duration: "3:45",
-    },
-    {
-      image: require("../../assets/images/Rectangle 225 (4).png"),
-      title: "Colors",
-      artist: "Ngơ",
-      duration: "3:45",
-    },
-  ];
+
   return (
     <>
       <section className="home">
@@ -89,14 +64,14 @@ const Home = () => {
           })}
         </Swiper>
         <div style={{ zIndex: 200, position: "relative" }}>
-          <ListCard title="Đã phát gần đây" />
+          <ListCard title="Đã phát gần đây" data={first_slide_home_data} />
         </div>
         <div style={{ zIndex: 100, position: "relative" }}>
-          <ListCard title="Đề xuất của Zyan" />
+          <ListCard title="Đề xuất của Zyan" data={second_slide_home_data} />
         </div>
 
         <div style={{ zIndex: 50 }}>
-          <ListCard title="Hôm nay nghe gì" />
+          <ListCard title="Bảng xếp hạng" data={third_slide_home_data} />
         </div>
         <div className="home__new-popular-music">
           <div className="home__new-popular-music__title">

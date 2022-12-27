@@ -8,6 +8,7 @@ import "swiper/css/bundle";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { data } from "../../contexts/dummy_data";
 
 const ListCard = (props) => {
   return (
@@ -42,72 +43,18 @@ const ListCard = (props) => {
             },
           }}
         >
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-              newtype
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-              newtype
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-              newtype
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              className="swiper-slide__content"
-              song="Born to Die"
-              artist="Lana Del Rey"
-            />
-          </SwiperSlide>
+          {props.data.map((e) => {
+            return (
+              <SwiperSlide>
+                <Card
+                  image={e.image}
+                  title={e.title}
+                  description={e.description}
+                  newtype={e.newtype}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

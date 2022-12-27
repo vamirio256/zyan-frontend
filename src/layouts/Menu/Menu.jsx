@@ -60,7 +60,7 @@ const Menu = () => {
         {/* library */}
         <MenuButton
           id={menuId}
-          href="/favorite"
+          href="/library?id=favorite"
           defaultIcon={<AiOutlineHeart />}
           selectedIcon={<AiFillHeart />}
           title="Yêu thích"
@@ -68,7 +68,7 @@ const Menu = () => {
         />
         <MenuButton
           id={menuId}
-          href="/album"
+          href="/library?id=album"
           defaultIcon={<RiAlbumLine />}
           selectedIcon={<RiAlbumFill />}
           title="Album"
@@ -76,7 +76,7 @@ const Menu = () => {
         />
         <MenuButton
           id={menuId}
-          href="/download"
+          href="/library?id=download"
           defaultIcon={<AiOutlineDownload />}
           selectedIcon={<AiOutlineDownload color="white" />}
           title="Tải xuống"
@@ -84,7 +84,7 @@ const Menu = () => {
         />
         <MenuButton
           id={menuId}
-          href="/follow"
+          href="/library?id=follow"
           defaultIcon={<BsPerson />}
           selectedIcon={<BsPersonFill />}
           title="Theo dõi"

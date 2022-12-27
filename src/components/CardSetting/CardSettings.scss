@@ -1,6 +1,7 @@
 @import "../../breakpoint.scss";
 .card-settings {
   background-color: var(--media-control-bg);
+  position: relative;
   z-index: 100000;
   border-radius: 10px;
   padding: 10px;
