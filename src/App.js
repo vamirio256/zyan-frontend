@@ -15,6 +15,8 @@ import Playlist from "./pages/Playlist/Playlist";
 import Login from "./pages/Login/Login";
 import Library from "./pages/Library/Library";
 import Contact from "./pages/Contact/Contact";
+import Admin from "./pages/Admin/AdminPage";
+import AdminPage from "./pages/Admin/AdminPage";
 
 export const ThemeContext = createContext(null);
 
