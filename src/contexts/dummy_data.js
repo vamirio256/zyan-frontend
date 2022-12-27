@@ -12,16 +12,72 @@ export const data = [
     id: 2,
   },
 ];
+export const genre_data = [
+  {
+    title: "Podcast",
+    color: "#27856A",
+    link: require("../assets/genre/postcast.png"),
+  },
+  {
+    title: "V-POP ",
+    color: "#477D95",
+    link: require("../assets/genre/image 5 (1).png"),
+  },
+  {
+    title: "K-POP",
+    color: "#148A08",
+    link: require("../assets/genre/image 5 (2).png"),
+  },
+  {
+    title: "US-UK",
+    color: "#8C1932",
+    link: require("../assets/genre/image 5 (3).png"),
+  },
+  {
+    title: "Chill",
+    color: "#BA5D07",
+    link: require("../assets/genre/image 5 (4).png"),
+  },
+  {
+    title: "Mood",
+    color: "#509BF5",
+    link: require("../assets/genre/image 5 (6).png"),
+  },
+  {
+    title: "Romance",
+    color: "#FF4632",
+    link: require("../assets/genre/image 5 (7).png"),
+  },
+  {
+    title: "Jazz",
+    color: "#8D67AB",
+    link: require("../assets/genre/image 5 (5).png"),
+  },
+];
 export const songsdata = [
+  {
+    title: "Biên Vạn Thiên (别万千)",
+    artist: "DAWN",
+    url: require("../assets/music/Bien Van Thien - DAWN.mp3"),
+    image: require("../assets/music/1.jpg"),
+    duration: "3:25",
+    currentTime: 0,
+  },
   {
     title: "Pháo Hồng",
     artist: "Đạt Long Vinh",
-    url: "../../assets/music/Phao Hong - Dat Long Vinh.m4a",
+    url: require("../assets/music/Phao Hong - Dat Long Vinh.m4a"),
+    image: require("../assets/music/3.jpg"),
+    duration: "3:55",
+    currentTime: 0,
   },
   {
     title: "Bones",
     artist: "Image Dragon",
-    url: "../../assets/music/Image Dragon.mp3",
+    url: require("../assets/music/Image Dragon.mp3"),
+    image: require("../assets/music/2.jpg"),
+    duration: "2:45",
+    currentTime: 0,
   },
 ];
 export const first_slide_home_data = [

@@ -1,0 +1,64 @@
+@import "../../breakpoint.scss";
+
+.contact {
+  &__banner {
+    background-image: url("../../assets/images/Rectangle 289.png");
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+      font-size: 50px;
+      font-weight: 800;
+    }
+  }
+  &__information {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+  }
+  &__form {
+    @include mobile {
+      padding: 0 20px;
+    }
+    margin-bottom: 20px;
+    margin-top: 50px;
+    label {
+      font-size: 16px;
+    }
+    input,
+    textarea {
+      @include mobile {
+        width: 90%;
+      }
+      margin: 10px 0;
+      padding: 10px 5px;
+      display: block;
+      width: 80%;
+      outline: none;
+      border: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      box-shadow: 0px 0px 2px 2px rgba(4, 4, 4, 0.1);
+    }
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: var(--blue);
+      color: white;
+      border: none;
+      box-shadow: 0px 0px 1px 1px rgba(116, 116, 116, 0.75);
+    }
+  }
+}

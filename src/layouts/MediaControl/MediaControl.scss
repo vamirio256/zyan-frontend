@@ -27,6 +27,7 @@
       display: flex;
       padding: 10px 0;
       align-items: center;
+      width: 200px;
       &__img {
         box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
         width: 70px;
@@ -60,17 +61,32 @@
     }
     &__control {
       padding-top: 10px;
-
+      svg {
+        color: var(--grey);
+        cursor: pointer;
+      }
       &__icon {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        svg {
-          color: var(--grey);
-          @include mobile {
+        @include mobile {
+          svg {
             display: none;
           }
+        }
+        &__mobile-play {
+          width: 40px;
+          height: 40px;
+
+          display: block;
+        }
+        &__mobile-pause {
+          background-color: var(--blue);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          color: white !important;
+          display: block !important;
         }
         @include tablet-desktop {
           &__mobile-setting {
@@ -91,6 +107,7 @@
         align-items: center;
         justify-content: center;
         .timeline-wrapper {
+          cursor: pointer;
           margin: 0 15px;
           width: 300px;
 
@@ -111,7 +128,7 @@
           &__running-line {
             margin: 0;
             background-color: var(--blue);
-            width: 30px;
+            width: 0%;
           }
         }
         @include mobile {
@@ -136,15 +153,15 @@
         padding-right: 10px;
       }
       .volume-wrapper {
+        cursor: pointer;
         margin-right: 10px;
         width: 50px;
         background-color: var(--grey);
-        height: 2px;
+        height: 3px;
         border-radius: 100px;
         &__running-line {
-          width: 24px;
           background-color: var(--blue);
-          height: 2px;
+          height: 3px;
           border-radius: 100px;
         }
       }

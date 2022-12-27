@@ -1,3 +1,4 @@
+@import "../../breakpoint.scss";
 .discover {
   &__title {
     font-size: 25px;
@@ -25,5 +26,73 @@
       margin-left: auto;
       border-radius: 20px;
     }
+  }
+  &__banner {
+    margin-right: 50px;
+    @include mobile {
+      margin-right: 25px;
+    }
+    &__container {
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      height: 300px;
+      padding-left: 50px;
+      @include tablet-desktop {
+        align-items: center;
+      }
+      @include mobile {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-self: start;
+      }
+    }
+    &__image {
+      margin-right: 30px;
+      img {
+        width: 220px;
+        height: 220px;
+        @include mobile {
+          margin-bottom: 10px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+    &__content {
+      &__type {
+        font-size: 25px;
+        color: var(--grey);
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+      &__title {
+        font-size: 35px;
+        color: black;
+        font-weight: 700;
+        margin: 20px 0;
+        @include mobile {
+          font-size: 25px;
+          margin: 5px 0;
+        }
+      }
+      &__des {
+        font-size: 20px;
+        font-weight: 600;
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    margin-top: 20px;
+    height: 300px;
   }
 }

@@ -9,6 +9,7 @@ import {
   AiOutlineDownload,
   AiOutlinePlus,
   AiOutlineClose,
+  AiFillContacts,
 } from "react-icons/ai";
 import { HiOutlineMicrophone, HiMicrophone } from "react-icons/hi";
 import { RiAlbumFill, RiAlbumLine } from "react-icons/ri";
@@ -17,6 +18,7 @@ import { useLocation } from "react-router-dom";
 import { BsPerson, BsPersonFill } from "react-icons/bs";
 import { data } from "../../contexts/dummy_data";
 import { useEffect } from "react";
+import { MdOutlineContactPhone } from "react-icons/md";
 
 const Menu = () => {
   let path = useLocation().pathname;
@@ -108,6 +110,16 @@ const Menu = () => {
             />
           );
         })}
+      </div>
+      <div className="menu__list menu__contact">
+        <MenuButton
+          id={menuId}
+          href="/contact"
+          defaultIcon={<MdOutlineContactPhone />}
+          selectedIcon={<AiFillContacts />}
+          title="Liên hệ"
+          parentSetState={setMenuId}
+        />
       </div>
     </aside>
   );

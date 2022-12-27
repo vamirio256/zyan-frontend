@@ -40,6 +40,8 @@
     }
   }
   &__icon {
+    display: flex;
+    justify-content: space-between;
     margin: 20px;
     color: var(--grey);
     font-size: 25px;
@@ -49,6 +51,12 @@
         top: 2px;
       }
       margin-right: 10px;
+    }
+    select {
+      border: none;
+      outline: none;
+      background-color: var(--main-bg);
+      font-size: 15px;
     }
   }
   &__table {

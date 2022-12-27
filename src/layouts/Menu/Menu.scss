@@ -54,6 +54,11 @@
       height: 20px;
     }
   }
+  &__contact {
+    width: 150px;
+    position: absolute;
+    bottom: 20px;
+  }
 }
 #dark {
   .test {

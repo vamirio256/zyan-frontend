@@ -1,50 +1,84 @@
 import "./Discover.scss";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Autoplay, Pagination } from "swiper";
+import { genre_data } from "../../contexts/dummy_data";
 
 const Discover = () => {
-  const data = [
-    {
-      title: "Podcast",
-      color: "#27856A",
-      link: require("../../assets/genre/postcast.png"),
-    },
-    {
-      title: "V-POP ",
-      color: "#477D95",
-      link: require("../../assets/genre/image 5 (1).png"),
-    },
-    {
-      title: "K-POP",
-      color: "#148A08",
-      link: require("../../assets/genre/image 5 (2).png"),
-    },
-    {
-      title: "US-UK",
-      color: "#8C1932",
-      link: require("../../assets/genre/image 5 (3).png"),
-    },
-    {
-      title: "Chill",
-      color: "#BA5D07",
-      link: require("../../assets/genre/image 5 (4).png"),
-    },
-    {
-      title: "Mood",
-      color: "#509BF5",
-      link: require("../../assets/genre/image 5 (6).png"),
-    },
-    {
-      title: "Romance",
-      color: "#FF4632",
-      link: require("../../assets/genre/image 5 (7).png"),
-    },
-    {
-      title: "Jazz",
-      color: "#8D67AB",
-      link: require("../../assets/genre/image 5 (5).png"),
-    },
-  ];
+  const data = genre_data;
   return (
     <div className="container discover">
+      <h1 className="discover__title">Đề xuất</h1>
+      <div className="discover__banner">
+        <Swiper
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="discover__banner__container row">
+              <div className="discover__banner__image">
+                <img src={require("../../assets/images/banner1.png")} alt="" />
+              </div>
+              <div className="discover__banner__content">
+                <div className="discover__banner__content__type">PODCAST</div>
+                <div className="discover__banner__content__title">
+                  Luyện Nghe Tiếng Anh
+                </div>
+                <div className="discover__banner__content__des">
+                  Callum Nguyen
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="discover__banner__container row">
+              <div className="discover__banner__image">
+                <img src={require("../../assets/images/banner2.png")} alt="" />
+              </div>
+              <div className="discover__banner__content">
+                <div className="discover__banner__content__type">PLAYLIST</div>
+                <div className="discover__banner__content__title">
+                  Hit Rewind
+                </div>
+                <div className="discover__banner__content__des">
+                  Nghe lại các hit mà bạn đã bỏ lỡ
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="discover__banner__container row">
+              <div className="discover__banner__image">
+                <img src={require("../../assets/images/banner3.png")} alt="" />
+              </div>
+              <div className="discover__banner__content">
+                <div className="discover__banner__content__type">PODCAST</div>
+                <div className="discover__banner__content__title">
+                  Intense Studying
+                </div>
+                <div className="discover__banner__content__des">
+                  Matthew Koma
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
       <h1 className="discover__title">Thể loại đề xuất</h1>
       <p>Dựa theo nhạc nghe nhiều nhất</p>
       <div className="discover__genre discover__genre-main">

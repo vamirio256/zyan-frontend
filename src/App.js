@@ -15,6 +15,7 @@ import Playlist from "./pages/Playlist/Playlist";
 import Login from "./pages/Login/Login";
 import Library from "./pages/Library/Library";
 import Contact from "./pages/Contact/Contact";
+import Lyrics from "./pages/Lyrics/Lyrics";
 
 export const ThemeContext = createContext(null);
 
@@ -39,7 +40,8 @@ function App() {
                 <Route path="/discover" element={<Discover />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/playlist" element={<Playlist />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<Contact />} />{" "}
+                <Route path="/lyrics" element={<Lyrics />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </div>
