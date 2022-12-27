@@ -1,0 +1,63 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "name": "Ervin Howell",
+      "file": "localhost:80/2",
+      "image": {
+        "rawFile": {
+          "path": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+        },
+        "src": "blob:http://localhost:3000/5e5f573f-7f5e-4f9d-8424-b3f5fd145eef",
+        "title": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+      },
+      "weekView": 3,
+      "totalView": 6,
+      "artistId": 1,
+      "albumId": 1,
+      "genreId": 1
+    },
+    {
+      "name": "Hello World",
+      "file": "13231",
+      "image": {
+        "rawFile": {
+          "path": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+        },
+        "src": "blob:http://localhost:3000/1a0db9b6-11f5-4704-bd52-b0aa80e7a789",
+        "title": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+      },
+      "id": 2
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "name": "Born to Die",
+      "image": "localhost:80/2"
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Rocks",
+      "image": "localhost:80/2"
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "DCOD",
+      "image": "localhost:80/2",
+      "totalView": 30
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Lana Del Rey",
+      "image": "localhost:80/2",
+      "totalView": 60
+    }
+  ]
+}
