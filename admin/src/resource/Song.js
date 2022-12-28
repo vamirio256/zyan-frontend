@@ -42,7 +42,7 @@ export const SongList = () => {
           <ReferenceField source="albumId" reference="albums" />
           <ReferenceField source="genreId" reference="genres" />
           <MyUrlField source="file" />
-          <MyUrlField source="image.src" />
+          <ImageField source="image.src" />
           <NumberField source="weekView" />
           <NumberField source="totalView" />
           <EditButton />
@@ -52,14 +52,8 @@ export const SongList = () => {
   );
 };
 
-const SongTitle = () => {
-  const record = useRecordContext();
-  return <span>Song {record ? `"${record.name}"` : ""}</span>;
-};
-
 export const SongEdit = () => (
   <Edit>
-    <Edit title={<SongTitle />} />  
     <SimpleForm>
     <TextInput source="id" disabled />
       <ReferenceInput source="artistId" reference="artists" />
