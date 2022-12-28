@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "Ervin Howell",
-      "file": "localhost:80/2",
+      "file": null,
       "image": {
         "rawFile": {
-          "path": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+          "path": "Ảnh playlist.png"
         },
-        "src": "blob:http://localhost:3000/5e5f573f-7f5e-4f9d-8424-b3f5fd145eef",
-        "title": "ab67616d0000b273cb76604d9c5963544cf5be64.jfif"
+        "src": "blob:http://localhost:3006/68102e70-6446-434f-bb67-f32ad0d6cb12",
+        "title": "Ảnh playlist.png"
       },
       "weekView": 3,
       "totalView": 6,

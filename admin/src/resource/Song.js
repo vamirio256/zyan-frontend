@@ -16,13 +16,17 @@ import {
   ImageField,
   Create,
   useRecordContext,
+  FileInput,
+  FileField,
 } from "react-admin";
 import MyUrlField from "../components/MyUrlField";
 
 const songFilter = [
- <TextInput source="q" label="Search" alwaysOn />,
- <ReferenceInput source="artistId" label="Artist" reference="artists" />
-]
+  <TextInput source="q" label="Search" alwaysOn />,
+  <ReferenceInput source="artistId" label="Artist" reference="artists" />,
+  <ReferenceInput source="albumId" label="Album" reference="albums" />,
+  <ReferenceInput source="genreId" label="Genre" reference="genres" />,
+];
 
 export const SongList = () => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
@@ -41,10 +45,8 @@ export const SongList = () => {
           <ReferenceField source="artistId" reference="artists" />
           <ReferenceField source="albumId" reference="albums" />
           <ReferenceField source="genreId" reference="genres" />
-          <MyUrlField source="file" />
-          <ImageField source="image.src" />
-          <NumberField source="weekView" />
-          <NumberField source="totalView" />
+          <FileField source="file.src" />
+          <ImageField source="image.src" label="Image" />
           <EditButton />
         </Datagrid>
       )}
@@ -55,12 +57,14 @@ export const SongList = () => {
 export const SongEdit = () => (
   <Edit>
     <SimpleForm>
-    <TextInput source="id" disabled />
+      <TextInput source="id" disabled />
       <ReferenceInput source="artistId" reference="artists" />
       <ReferenceInput source="albumId" reference="albums" />
       <ReferenceInput source="genreId" reference="genres" />
       <TextInput source="name" />
-      <TextInput source="file" />
+      <FileInput source="file" label="Song File">
+        <FileField source="src" title="title" />
+      </FileInput>
       <ImageInput source="image" label="Song Picture" accept="image/*">
         <ImageField source="src" title="title" />
       </ImageInput>
@@ -76,7 +80,9 @@ export const SongCreate = () => (
       <ReferenceInput source="genreId" reference="genres" />
       <TextInput source="id" disabled />
       <TextInput source="name" />
-      <TextInput source="file" />
+      <FileInput source="file" label="Song File">
+        <FileField source="src" title="title" />
+      </FileInput>
       <ImageInput source="image" label="Song Picture" accept="image/*">
         <ImageField source="src" title="title" />
       </ImageInput>
